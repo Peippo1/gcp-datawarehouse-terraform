@@ -45,3 +45,15 @@ This project provisions core infrastructure for a simple data warehouse setup in
 ---
 
 This infrastructure is a foundation for building GCP-based analytics workflows, and can be extended with IAM bindings, BigQuery tables, scheduled queries, and integration with Dataiku.
+
+## Architecture Overview
+
+```mermaid
+graph TD
+    Terraform[Terraform Configuration]
+    BigQuery[BigQuery Dataset<br/>(google_trends)]
+    GCS[Cloud Storage Bucket<br/>(Staging Bucket)]
+
+    Terraform --> BigQuery
+    Terraform --> GCS
+```
