@@ -1,4 +1,5 @@
 ![Terraform](https://img.shields.io/badge/Terraform-1.5.7-blue?logo=terraform&logoColor=white)
+![Terraform CI](https://github.com/Peippo1/gcp-datawarehouse-terraform/actions/workflows/terraform-ci.yml/badge.svg)
 # GCP Data Warehouse Terraform Project
 
 This project provisions core infrastructure for a simple data warehouse setup in Google Cloud using Terraform.
@@ -58,3 +59,14 @@ graph TD
     Terraform --> BigQuery
     Terraform --> GCS
 ```
+
+## ⚙️ CI/CD Automation
+
+This project includes a GitHub Actions workflow that performs the following on every pull request to `master`:
+
+- Checks Terraform formatting (`terraform fmt`)
+- Initializes the Terraform working directory (`terraform init`)
+- Validates configuration syntax (`terraform validate`)
+- Generates a plan to show what changes will be made (`terraform plan`)
+
+It securely authenticates with GCP using a service account stored as a GitHub secret (`GCP_CREDENTIALS`), ensuring that infrastructure code is validated continuously without exposing sensitive credentials.
