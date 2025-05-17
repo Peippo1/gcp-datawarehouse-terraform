@@ -30,3 +30,5 @@ resource "google_storage_bucket" "warehouse_staging" {
   location = var.region
   force_destroy = true
 }
+
+# Added to test 
