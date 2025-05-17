@@ -51,8 +51,8 @@ This infrastructure is a foundation for building GCP-based analytics workflows, 
 ```mermaid
 graph TD
     Terraform[Terraform Configuration]
-    BigQuery[BigQuery Dataset<br/>(google_trends)]
-    GCS[Cloud Storage Bucket<br/>(Staging Bucket)]
+    BigQuery[BigQuery Dataset\ngoogle_trends]
+    GCS[Cloud Storage Bucket\nStaging Bucket]
 
     Terraform --> BigQuery
     Terraform --> GCS
