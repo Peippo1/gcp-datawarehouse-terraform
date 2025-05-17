@@ -1,0 +1,14 @@
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+*.json
+
+*.log
+*.bak
+*.swp
+*.DS_Store
+
+.vscode/
+
+.terraform.lock.hcl
