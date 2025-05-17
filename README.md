@@ -1,3 +1,4 @@
+![Terraform](https://img.shields.io/badge/Terraform-1.5.7-blue?logo=terraform&logoColor=white)
 # GCP Data Warehouse Terraform Project
 
 This project provisions core infrastructure for a simple data warehouse setup in Google Cloud using Terraform.
