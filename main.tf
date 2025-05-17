@@ -13,10 +13,10 @@ provider "google" {
 }
 
 resource "google_bigquery_dataset" "main" {
-  dataset_id                  = var.dataset_id
-  friendly_name               = "My Data Warehouse"
-  description                 = "Terraform-managed BQ dataset"
-  location                    = var.region
+  dataset_id                 = var.dataset_id
+  friendly_name              = "My Data Warehouse"
+  description                = "Terraform-managed BQ dataset"
+  location                   = var.region
   delete_contents_on_destroy = true
 }
 
@@ -26,8 +26,8 @@ resource "random_id" "bucket_suffix" {
 
 resource "google_storage_bucket" "warehouse_staging" {
   # Construct a globally unique bucket name
-  name     = "${var.project_id}-warehouse-staging-${random_id.bucket_suffix.hex}"
-  location = var.region
+  name          = "${var.project_id}-warehouse-staging-${random_id.bucket_suffix.hex}"
+  location      = var.region
   force_destroy = true
 }
 
