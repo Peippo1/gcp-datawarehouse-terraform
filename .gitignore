@@ -12,3 +12,20 @@ terraform.tfvars
 .vscode/
 
 .terraform.lock.hcl
+
+# Terraform files
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Local config files
+.vscode/
+.idea/
+
+# Secrets
+*.pem
+*.key
+*.json
+
+# OS generated files
+.DS_Store
