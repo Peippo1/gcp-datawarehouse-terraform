@@ -8,9 +8,9 @@ This project provisions core infrastructure for a simple data warehouse setup in
 ### ✅ What it Deploys
 - A **BigQuery dataset** named `google_trends`
 - A **Google Cloud Storage bucket** (with randomized suffix) for staging data
-- A **Compute Engine VM** (`linux-admin-vm`) configured with:
+- (Temporarily decommissioned) A **Compute Engine VM** (`linux-admin-vm`) configured with:
   - Debian 11
-  - UFW firewall enabled (allowing SSH)
+  - UFW firewall enabled (allowing SSH and Dataiku port)
   - A dedicated `dataiku` user for installing and running Dataiku DSS
 - IAM roles for secure access management
 
@@ -51,6 +51,7 @@ This project provisions core infrastructure for a simple data warehouse setup in
 - This project uses a simple dataset ID `google_trends` for demonstration purposes.
 - UFW firewall is configured on the VM to restrict access, allowing only SSH by default.
 - The VM is intended to be used for installing Dataiku DSS and related workloads.
+- The VM has been torn down to minimize cloud costs. You can re-provision it using Terraform when needed.
 - You can modify variables in `terraform.tfvars`.
 
 ---

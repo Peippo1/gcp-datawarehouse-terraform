@@ -1,6 +1,6 @@
 resource "google_compute_instance" "linux_admin_vm" {
   name         = "linux-admin-vm"
-  machine_type = "e2-micro"
+  machine_type = "e2-standard-2"
   zone         = "europe-west2-a"
 
   boot_disk {
@@ -22,4 +22,4 @@ resource "google_compute_instance" "linux_admin_vm" {
     email  = google_service_account.terraform_sa.email
     scopes = ["https://www.googleapis.com/auth/cloud-platform"]
   }
-}
+} 
